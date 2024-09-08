@@ -68,8 +68,30 @@ double calculatePerimeter(){
 
 }
 
+double calculateArea(){
+    //ask user to input all x and y coords for both points used in the function
+    printf("Enter x1, x2, y1, and y2:\n");
+    double x1, x2, y1, y2;
+    scanf("%lf %lf %lf %lf", &x1, &x2, &y1, &y2);
+    
+    //prints both x and both y points entered by the user
+    printPoints(x1,x2,y1,y2);
+
+    //calculates area of a circle with a diameter equal to the distance between entered points
+    double radius = findDistance(x1,x2,y1,y2)/2;
+    double area = pi*pow(radius,2);
+    printf("The area of the city encompassed by your request is %lf\n", area);
+    return 1.0;
+}
+
+double calculateWidth(){
+    
+}
+
+
 int main(int argc, char **argv) {
     //calculateDistance();
-    calculatePerimeter();
+    //calculatePerimeter();
+    //calculateArea();
     return 0;
 }
