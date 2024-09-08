@@ -26,7 +26,7 @@ double calculateDistance() {
     printPoints(x1,x2,y1,y2);
 
     double distance = findDistance(x1,x2,y1,y2);
-    printf("The distance between the 2 points is %lf\n",distance);
+    printf("– The distance between the two points is %lf\n",distance);
     return distance;
 }
 
@@ -101,6 +101,6 @@ int main(int argc, char **argv) {
     calculateArea();
     calculateWidth();
     calculateHeight();
-    
+
     return 0;
 }
