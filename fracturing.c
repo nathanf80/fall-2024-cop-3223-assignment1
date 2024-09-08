@@ -2,27 +2,6 @@
 #include<math.h>
 #define pi 3.14159
 
-/*
-double getMultiple(int arg1) {
-    double result = arg1 * 10;
-    return result;
-}
-
-int main(int argc, char** argv){
-    int newVariable = 5;
-    double giveMyMultiple = getMultiple(newVariable);
-    printf("the multiple of %d is %lf\n",newVariable, giveMyMultiple);
-
-    return 0;
-}
-*/
-/*
-double askForUserInput() {
-    double input;
-    scanf("%lf", &input);
-    return input;
-}
-*/
 
 void printPoints(double x1, double x2, double y1, double y2){
 
@@ -85,13 +64,43 @@ double calculateArea(){
 }
 
 double calculateWidth(){
+    //ask user to input all x and y coords for both points used in the function
+    printf("Enter x1, x2, y1, and y2:\n");
+    double x1, x2, y1, y2;
+    scanf("%lf %lf %lf %lf", &x1, &x2, &y1, &y2);
     
+    //prints both x and both y points entered by the user
+    printPoints(x1,x2,y1,y2);
+
+    //calculates the x component (width) of the line formed between the entered points
+    double width = x2-x1;
+    printf("The width of the city encompassed by your request is %lf\n", width);
+    return 1.5;
+    //difficulty of 1.5 becasue its deceptively simple which makes me think i didnt unnderstand the assignment
+}
+
+double calculateHeight(){
+    //ask user to input all x and y coords for both points used in the function
+    printf("Enter x1, x2, y1, and y2:\n");
+    double x1, x2, y1, y2;
+    scanf("%lf %lf %lf %lf", &x1, &x2, &y1, &y2);
+    
+    //prints both x and both y points entered by the user
+    printPoints(x1,x2,y1,y2);
+
+    //calculates the x component (width) of the line formed between the entered points
+    double height = y2-y1;
+    printf("The height of the city encompassed by your request is %lf\n", height);
+    return 1.5;
 }
 
 
 int main(int argc, char **argv) {
-    //calculateDistance();
-    //calculatePerimeter();
-    //calculateArea();
+    calculateDistance();
+    calculatePerimeter();
+    calculateArea();
+    calculateWidth();
+    calculateHeight();
+    
     return 0;
 }
